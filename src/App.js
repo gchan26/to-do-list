@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Form from "./Form";
+import "./App.css";
 
-function App() {
+export default () => {
+  const [todos, setTodos] = useState([]);
+
+  const reset = () => {
+    if (window.confirm("Are you sure you want to reset your list?") == true) {
+      setTodos([]);
+    }
+  }
+
+  const toggleComplete = (i) =>
+    setTodos(
+      todos.map((todo, k) =>
+        k === i
+          ? {
+              ...todo,
+              complete: !todo.complete,
+            }
+          : todo
+      )
+    );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <div className="heading">
+          <h1>To-Do List</h1>
+          <button onClick={reset}><span>Reset List</span></button>
+        </div>
+          <Form   
+            onSubmit={(text) => setTodos([{ text, complete: false }, ...todos])}
+          />
+      <div>
+          {todos.map(({ text, complete }, i) => (
+            <div
+              key={text}
+              onClick={() => toggleComplete(i)}
+              style={{
+                textDecoration: complete ? "line-through" : "",
+                fontFamily: 'Poppins',
+                fontSize: '1.7em',
+                margin: '10px 0',
+                cursor: 'pointer',
+              }}
+            >
+              {text}
+            </div>
+          ))}
+        </div>
+      </div>
+    
   );
-}
-
-export default App;
+};
