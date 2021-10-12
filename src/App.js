@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Form from "./Form";
 import "./App.css";
+import emptyList from './undraw_empty.svg';
 
 export default () => {
   const [todos, setTodos] = useState([]);
@@ -46,6 +47,15 @@ export default () => {
             <Form   
               onSubmit={(text) => setTodos([{ text, complete: false }, ...todos])}
             />
+          {todos.length == 0 ? (
+          <div className="emptyPage">
+            <img src={emptyList} alt="Empty List" className="emptyImage"/>
+            <div className="emptyText">
+              <h1>You don't have any tasks yet!</h1>
+              <h3>Type your tasks in the Form above and once finished, click the task to mark it out.</h3>
+            </div>
+          </div>
+          ) : (
           <div>
             {todos.map(({ text, complete }, i) => (
               <div
@@ -63,6 +73,7 @@ export default () => {
               </div>
             ))}
           </div>
+          )}
         </div>
       </div>
   );

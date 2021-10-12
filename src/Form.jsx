@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import "./App.css";
 
 const useInputValue = (initialValue) => {
@@ -21,7 +20,7 @@ export default ({onSubmit}) => {
         onSubmit(text.value);
         resetValue();
       }}>
-        <input placeholder="Add Task..." {...text} />
+        <input placeholder='Add Task...' {...text} />
       </form>
   );
 };
