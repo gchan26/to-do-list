@@ -49,7 +49,7 @@ export default () => {
             />
           {todos.length == 0 ? (
           <div className="emptyPage">
-            <img src={emptyList} alt="Empty List" className="emptyImage"/>
+            <div className="emptyImageDiv"><img src={emptyList} alt="Empty List" className="emptyImage"/></div>
             <div className="emptyText">
               <h1>You don't have any tasks yet!</h1>
               <h3>Type your tasks in the Form above and once finished, click the task to mark it out.</h3>

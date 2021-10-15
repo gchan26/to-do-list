@@ -206,3 +206,196 @@ input:checked + .slider:before {
   width: 22em;
   margin-right: 3em;
 }
+
+
+/* Responsive Design */
+
+@media only screen and (min-width: 1180px) and (max-width: 1284px){
+  
+  .emptyImage {
+    width: 15em;
+    margin-right: 3em;
+  }
+
+  .emptyPage h1 {
+    font-size: 45px;
+  }
+
+  .emptyPage h3 {
+    font-size: 17px;
+  }
+  
+}
+
+  @media only screen and (min-width: 1000px) and (max-width: 1179.99px) {
+
+    h1 {
+      font-size: 2.5em;
+    }
+
+    .emptyImage {
+      width: 12em;
+    }
+
+    .emptyPage h1 {
+      font-size: 2.5em;
+    }
+
+    .emptyPage h3 {
+      font-size: 0.95em;
+    }
+      
+    span {
+      font-size: 35px;
+    }
+
+  }
+
+  @media only screen and (min-width: 780px) and (max-width: 999.99px) {
+
+    h1 {
+      font-size: 2.3em;
+    }
+
+    .emptyImage {
+      width: 11em;
+    }
+
+    .emptyPage h1 {
+      font-size: 1.7em;
+    }
+
+    .emptyPage h3 {
+      font-size: 0.85em;
+      margin-top: 0.4em;
+    }
+      
+    span {
+      font-size: 32px;
+    }
+
+    button span {
+      padding: 0.7em 1rem;
+    }
+    
+  }
+
+  @media only screen and (min-width: 508px) and (max-width: 779.99px) {
+
+    .App {
+      margin: 0px 1.5em;
+    } 
+
+    h1 {
+      font-size: 2.1em;
+    }
+
+    .emptyImage {
+      width: 10em;
+      margin-right: 4em;
+    }
+
+    .emptyPage h1 {
+      font-size: 1.4em;
+    }
+
+    .emptyPage h3 {
+      font-size: 0.74em;
+      margin-top: 0.8em;
+    }
+      
+    span {
+      font-size: 32px;
+    }
+
+    button span {
+      padding: 0.5em 0.8rem;
+    }
+    
+  }
+
+  @media only screen and (min-width: 390px) and (max-width: 507.99px) {
+
+    .App {
+      margin: 0px 1.5em;
+    } 
+
+    h1 {
+      font-size: 2.1em;
+    }
+
+    .emptyImage {
+      width: 11em;
+      margin-right: 0em;
+    }
+
+    .emptyPage {
+      display: grid;
+    }
+
+    .emptyPage h1 {
+      font-size: 1.4em;
+    }
+
+    .emptyPage h3 {
+      font-size: 0.74em;
+      margin-top: 0.8em;
+    }
+      
+    span {
+      font-size: 32px;
+    }
+
+    button span {
+      padding: 0.5em 0.8rem;
+    }
+    
+  }
+
+  @media only screen and (max-width: 389.99px) {
+
+    .App {
+      margin: 0px 1.5em;
+    } 
+
+    h1 {
+      font-size: 2em;
+    }
+
+    .emptyImage {
+      width: 11em;
+      margin-right: 0em;
+    }
+
+    .emptyImageDiv {
+      display: flex;
+      justify-content: center;
+    }
+
+    .Switch-and-Reset {
+      display: grid;
+    }
+
+    .emptyPage {
+      margin: 3em 0em;
+      display: inline-block;
+    }
+
+    .emptyPage h1 {
+      font-size: 1.4em;
+    }
+
+    .emptyPage h3 {
+      font-size: 0.74em;
+      margin-top: 0.8em;
+    }
+      
+    span {
+      font-size: 32px;
+    }
+
+    button span {
+      padding: 0.5em 0.8rem;
+    }
+    
+  }
